@@ -110,6 +110,7 @@ class Ahorcado:
         """(Ahorcado) -> NoneType
 
         >>>word = tennis_categories.get_word_of_category()
+        >>>current_game = Ahorcado()
         >>>current_game.word_guide()
         >>>current_game.is_letter()
         >>>current_game.letter = 'J'
@@ -211,57 +212,3 @@ class Ahorcado:
             self.wins += 1
             self.__init__()
             #self.letters_used = ''
-
-    def grafico(self):
-
-        if self.errors_count == 0:
-            print("|      ")
-            print("|      ")
-            print("|     ")
-            print("|  ")
-            print("|  ")
-
-        if self.errors_count == 1:
-            print("|   0  ")
-            print("|      ")
-            print("|     ")
-            print("|  ")
-            print("|    ")
-
-        if self.errors_count == 2:
-            print("|   0  ")
-            print("|   |   ")
-            print("|     ")
-            print("|  ")
-            print("|    ")
-
-        if self.errors_count == 3:
-            print("|   0  ")
-            print("|  /|   ")
-            print("|  ")
-            print("|    ")
-            print("|    ")
-
-
-        if self.errors_count == 4:
-            print("|   0  ")
-            print("|  /|\\   ")
-            print("|     ")
-            print("|  ")
-            print("|    ")
-
-
-        if self.errors_count == 5:
-            print("|   0  ")
-            print("|  /|\\   ")
-            print("|  /  ")
-            print("|  ")
-            print("|    ")
-
-
-        if self.errors_count == 6:
-            print("|   0  ")
-            print("|  /|\\   ")
-            print("|  / \\  ")
-            print("|  ")
-            print("|    ")

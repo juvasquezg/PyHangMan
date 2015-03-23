@@ -5,7 +5,7 @@ import tkinter
 import tkinter.filedialog
 import tkinter.font
 
-# The font for the rat race.
+# The font for the hangman GUI.
 FONT = ('Courier New', 18, 'bold')
 
 # Initialize global variables used in your code
@@ -17,8 +17,8 @@ words_of_category = {0: ['ROGER FEDERER','RODDICK','RAFAEL NADAL','DOLGOPOLOV','
                         ]}
 categories = ['Jugadores ATP', 'Jugadoras WTA', 'Latinos', 'Latinas']
 
-tennis_categories = ahorcado.Categories(categories, words_of_category, 1)
-current_game = ahorcado.Ahorcado()
+tennis_categories = hangman.Categories(categories, words_of_category, 1)
+current_game = hangman.Ahorcado()
 defeats_cnt = 0
 wins_cnt = 0
 
@@ -59,7 +59,7 @@ def defeat_wins():
     global wins_cnt
     global defeats_cnt
 
-    if current_game.errors_count == ahorcado.ERRORS:
+    if current_game.errors_count == hangman.ERRORS:
         print('Perdiste')
         defeats_cnt += 1
         defeats.set(defeats_cnt)
@@ -79,7 +79,7 @@ def play_game():
     show_category.set(category)
     s = current_game.word_guide()
     word_guide.set(current_game.words_guide)
-    current_game.errors_guide = '-'*ahorcado.ERRORS
+    current_game.errors_guide = '-'*hangman.ERRORS
     errors_guide.set(current_game.errors_guide)
     print(tennis_categories.user_choice)
     print(current_game.word)
